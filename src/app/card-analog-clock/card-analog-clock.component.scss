@@ -1,5 +1,6 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  // transition: all .4s ease;
 }
 
 .clock-dial {
@@ -23,7 +24,9 @@
   left: 240px;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.341);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 28px, rgba(0, 0, 0, 0.22) 0px 5px 10px;
+  z-index: +1;
 }
+
 .hour {
   font-size: 30px;
   font-weight: bold;
@@ -101,7 +104,6 @@
   top: 100px;
   left: 100px;
   border-radius: 50%;
-  z-index: -1;
 }
 
 .hour-hand {
@@ -114,6 +116,8 @@
   background-color: #005363;
   position: absolute;
   left: 148px;
+  // box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px, rgba(0, 0, 0, 0.22) 0px 0px 9px;
+
 }
 
 .hour-hand .arrow {
@@ -135,7 +139,6 @@
   top: 50px;
   left: 50px;
   border-radius: 50%;
-  z-index: -1;
 }
 
 .minute-hand {
@@ -148,6 +151,8 @@
   background-color: #005363;
   position: absolute;
   left: 198px;
+  // box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px, rgba(0, 0, 0, 0.22) 0px 0px 9px;
+
 }
 
 .minute-hand .arrow {
@@ -169,7 +174,6 @@
   top: 75px;
   left: 75px;
   border-radius: 50%;
-  z-index: -1;
 }
 
 .second-hand {
@@ -182,4 +186,5 @@
   background-color: #d32020;
   position: absolute;
   left: 174px;
+  // box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px, rgba(0, 0, 0, 0.22) 0px 0px 9px;
 }
