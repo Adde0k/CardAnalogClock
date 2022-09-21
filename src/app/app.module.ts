@@ -5,6 +5,8 @@ import { MaterialModule } from 'src/material-module';
 import { AppComponent } from './app.component';
 import { CardAnalogClockComponent } from './card-analog-clock/card-analog-clock.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -15,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         BrowserModule,
         MaterialModule,
         BrowserAnimationsModule,
+        ReactiveFormsModule,
+        NgxMatSelectSearchModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

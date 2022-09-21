@@ -13,33 +13,40 @@
   <div class="hour hour-11">11</div>
   <div class="hour hour-12">12</div>
 
-  <div
-    class="hour-hand-wrapper"
-    [ngStyle]="{ transform: 'rotate(' + hour + 'deg)' }"
-  >
+  <div class="hour-hand-wrapper" [ngStyle]="{ transform: 'rotate(' + hour + 'deg)' }">
     <div class="hour-hand">
       <div class="hand"></div>
       <!-- <div class="arrow">V</div> -->
     </div>
   </div>
 
-  <div
-    class="minute-hand-wrapper"
-    [ngStyle]="{ transform: 'rotate(' + minute + 'deg)' }"
-  >
+  <div class="minute-hand-wrapper" [ngStyle]="{ transform: 'rotate(' + minute + 'deg)' }">
     <div class="minute-hand">
       <div class="hand"></div>
       <!-- <div class="arrow">V</div> -->
     </div>
   </div>
 
-  <div
-    class="second-hand-wrapper"
-    [ngStyle]="{ transform: 'rotate(' + second + 'deg)' }"
-  >
+  <div class="second-hand-wrapper" [ngStyle]="{ transform: 'rotate(' + second + 'deg)' }">
     <div class="second-hand">
       <div class="hand"></div>
     </div>
   </div>
 </div>
 <h1>{{ digitalTime }}</h1>
+<form [formGroup]="formGroup">
+  <mat-form-field appearance="outline" class="select">
+    <mat-label> Timezone </mat-label>
+    <mat-select formControlName="tz" #singleSelect>
+      <mat-option>
+        <ngx-mat-select-search [formControl]="filteredTz1" placeholderLabel="Europe/Stockholm">
+        </ngx-mat-select-search>
+      </mat-option>
+      <mat-option *ngFor="let v of filteredOptions | async" [value]="v">
+        <div class="mat-select-search-custom-header-content">
+          {{ v }}
+        </div>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
