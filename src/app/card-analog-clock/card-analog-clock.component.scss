@@ -107,28 +107,27 @@
 }
 
 .digital {
-  transform: translate(-50%, -50%);
-  top: 80%;
-  left: 50%;
-  position: absolute;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  width: auto;
-  height: auto;
-  border-radius: 5px;
-
   display: flex;
   align-items: center;
   justify-content: center;
 
-  // font-family: "Segoe UI", sans-serif;
-  font-family: 'digital-clock';
-  font-size: 2.5rem;
-  padding: .75rem;
-  padding-top: .9rem;
+  transform: translate(-50%, -50%);
+  top: 80%;
+  left: 50%;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 0.75rem;
+  padding-top: 0.9rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0 0.1em 0.2em inset;
+
+  font-family: "digital-clock";
+  font-size: 2.5rem;
 }
 
 @font-face {
-  font-family: 'digital-clock';
-  src: url('../../assets/fonts/digital-7 (mono).ttf');
+  font-family: "digital-clock";
+  src: url("../../assets/fonts/digital-7 (mono).ttf");
 }
