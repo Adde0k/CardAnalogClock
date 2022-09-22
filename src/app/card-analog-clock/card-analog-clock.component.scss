@@ -1,6 +1,6 @@
 .container {
   aspect-ratio: 1 / 1;
-  width: 37.5%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,9 +10,7 @@
 }
 
 .clock-dial {
-  // background: url("../../../assets/clocks/clock-numbers.svg") no-repeat center, url("../../../assets/clocks/clock-dash.svg") no-repeat center;
-  // background-size: 90%, 100%;
-  background: url("../../../assets/clocks/clock-dash.svg") no-repeat center;
+  background: url("../../assets/clocks/clock-dash.svg") no-repeat center;
   background-size: 100%;
   width: 100%;
   height: 100%;
@@ -32,62 +30,53 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.341);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 28px, rgba(0, 0, 0, 0.22) 0px 5px 10px;
-    z-index: +1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 28px,
+      rgba(0, 0, 0, 0.22) 0px 5px 10px;
   }
   .hour-hand-wrapper {
     top: 0;
-    left: 0;
-    width: 100%;
+    left: calc(50% - 2px);
+    width: 4px;
     height: 100%;
     position: absolute;
     border-radius: 50%;
     .hour-hand {
-      transform:translateX(-50%);
       top: 20%;
       margin: 0;
-      width: 4px;
+      width: 100%;
       height: 30%;
       background-color: #005363;
       position: relative;
-      left: 50%;
-      // left: calc(50% - 2px);
     }
   }
   .minute-hand-wrapper {
     top: 0;
-    left: 0;
-    width: 100%;
+    left: calc(50% - 2px);
+    width: 4px;
     height: 100%;
     position: absolute;
     border-radius: 50%;
     .minute-hand {
-      transform:translateX(-50%);
       top: 8%;
-      width: 4px;
+      width: 100%;
       height: 42%;
       background-color: #005363;
       position: relative;
-      left: 50%;
-      // left: calc(50% - 2px);
     }
   }
   .second-hand-wrapper {
     top: 0;
-    left: 0;
-    width: 100%;
+    left: calc(50% - 1px);
+    width: 2px;
     height: 100%;
     position: absolute;
     border-radius: 50%;
     .second-hand {
-      transform:translateX(-50%);
       top: 12%;
-      width: 2px;
+      width: 100%;
       height: 38%;
       background-color: #d32020;
       position: relative;
-      left: 50%;
-      // left: calc(50% - 2px);
     }
   }
   // .brand {
@@ -123,8 +112,6 @@
   left: 50%;
   position: absolute;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  padding: 0.2em;
-  margin: 0.2em;
   width: auto;
   height: auto;
   border-radius: 5px;
@@ -133,9 +120,15 @@
   align-items: center;
   justify-content: center;
 
-  font-family: "Segoe UI", sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  z-index: -1;
+  // font-family: "Segoe UI", sans-serif;
+  font-family: 'digital-clock';
+  font-size: 2.5rem;
+  padding: .75rem;
+  padding-top: .9rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0 0.1em 0.2em inset;
+}
+
+@font-face {
+  font-family: 'digital-clock';
+  src: url('../../assets/fonts/digital-7 (mono).ttf');
 }

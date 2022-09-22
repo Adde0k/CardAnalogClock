@@ -1,7 +1,15 @@
 <div class="container">
   <div class="clock-dial">
-    <div class="point"></div>
+    <p class="digital">{{ digitalTime }}</p>
     <!-- <div class="brand">CGI</div> -->
+
+    <div
+      class="second-hand-wrapper"
+      [ngStyle]="{ transform: 'rotate(' + second + 'deg)' }"
+    >
+      <div class="second-hand"></div>
+    </div>
+
     <div
       class="hour-hand-wrapper"
       [ngStyle]="{ transform: 'rotate(' + hour + 'deg)' }"
@@ -16,13 +24,7 @@
       <div class="minute-hand"></div>
     </div>
 
-    <div
-      class="second-hand-wrapper"
-      [ngStyle]="{ transform: 'rotate(' + second + 'deg)' }"
-    >
-      <div class="second-hand"></div>
-    </div>
-    <p class="digital">{{ digitalTime }}</p>
+    <div class="point"></div>
   </div>
   <form [formGroup]="formGroup">
     <mat-form-field appearance="outline" class="select">
