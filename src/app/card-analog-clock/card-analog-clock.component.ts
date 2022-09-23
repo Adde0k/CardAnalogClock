@@ -1,15 +1,16 @@
 /* eslint-disable */
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { DateTime } from 'luxon';
 import { ReplaySubject } from 'rxjs';
+import { ElementQueries } from 'css-element-queries';
 
 @Component({
   selector: 'app-card-analog-clock',
   templateUrl: './card-analog-clock.component.html',
   styleUrls: ['./card-analog-clock.component.scss'],
 })
-export class CardAnalogClockComponent implements OnInit {
+export class CardAnalogClockComponent implements OnInit, AfterViewInit {
   formGroup = new FormGroup({
     tz: new FormControl('Europe/Stockholm'),
   });
@@ -377,6 +378,11 @@ export class CardAnalogClockComponent implements OnInit {
 
   filteredOptions: ReplaySubject<string[]> = new ReplaySubject<string[]>();
   filteredTz1!: FormControl;
+
+  ngAfterViewInit() {
+    ElementQueries.listen();
+    ElementQueries.init();
+  }
 
   ngOnInit(): void {
 

@@ -4,13 +4,6 @@
     <!-- <div class="brand">CGI</div> -->
 
     <div
-      class="second-hand-wrapper"
-      [ngStyle]="{ transform: 'rotate(' + second + 'deg)' }"
-    >
-      <div class="second-hand"></div>
-    </div>
-
-    <div
       class="hour-hand-wrapper"
       [ngStyle]="{ transform: 'rotate(' + hour + 'deg)' }"
     >
@@ -22,6 +15,13 @@
       [ngStyle]="{ transform: 'rotate(' + minute + 'deg)' }"
     >
       <div class="minute-hand"></div>
+    </div>
+    
+    <div
+      class="second-hand-wrapper"
+      [ngStyle]="{ transform: 'rotate(' + second + 'deg)' }"
+    >
+      <div class="second-hand"></div>
     </div>
 
     <div class="point"></div>
